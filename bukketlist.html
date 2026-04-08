@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내 버킷리스트 카드</title>
+    <style>
+        
+        /* 기본 카드 디자인 (자유롭게 수정 가능) */
+        .card {
+            
+            width: 300px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #bd9e22 0%, #0E0F37 100%);
+            padding: 15px 15px 35px 15px;
+            border-radius: 2px 2px 15px 5px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+            /* 배지의 기준점이 되기 위한 필수 속성 */
+            position: relative; 
+            
+            
+
+        }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
+        .card h2 { color: #5388bd; font-size: 1.5rem; margin-bottom: 10px; }
+        .card p { color: #211990; font-size: 1.1rem; line-height: 1.5; }
+        .card:hover{
+            transform: scale(1.02);
+        }
+        .plane{
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 30px;
+            z-index: 10;
+            transform: rotate(-15deg);
+        }
+        /* 1. 배지 (absolute) 관련 CSS를 작성하세요 */
+        .badge{
+            position: absolute;
+            right: -10px;
+            top:-10px;
+            background-color: #ff4757;
+            color:white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0,0,0.2);
+            
+        }
+
+        /* 2. 비밀 메모 (visibility) 및 hover 효과 관련 CSS를 작성하세요 */
+        .secret-memo{
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed;
+            color:#7f8ced;
+            font-size: 0.9rem;
+            
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card:hover .secret-memo{
+            visibility: visible;
+            opacity: 1;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="plane">✈️</div>
+
+        <div class="badge">Dream</div>
+        <img src="https://tourimage.interpark.com/BBS/Tour/FckUpload/201503/6356258929950226150.jpg" alt="체코 밤 풍경">
+        
+        <h2>✨ 배준서 기가막히는 꿈의 희망 버킷리스트✨</h2>
+        <p>🏰 1. 역사와 낭만이 가득한 랜드마크 방문(프라하성)</p>
+        <p>🚢 2. 강 위에서 프라하의 성과 카를교를 한눈에 담을 수 있는 유람선 투어</p>
+        
+    <div class ="secret-memo">💰 돈은 없지만 버킷리스트라도 여행을 가기 ㅎㅎ </div>
+</div> </body>
+</html>
