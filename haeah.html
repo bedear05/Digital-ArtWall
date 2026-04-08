@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>버킷리스트 카드</title>
+    <style>
+        /* 기본 카드 디자인 (자유롭게 수정 가능) */
+        .card {
+            width: 300px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #001f3f 0%, #610063 40%, #6c5ce7 100%);
+            padding: 15px 15px 35px 15px;
+            border-radius: 2px 2px 15px 5px;
+            box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+            /* 배지의 기준점이 되기 위한 필수 속성 */
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05) rotate(-3deg);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #f0f0f0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .card p .icon {
+            color: #e0f7fa;
+        }
+
+        /* 1. 배지 (absolute) 관련 CSS를 작성하세요 */
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            transform: rotate(15deg);
+            background-color: #ff4757;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 11;
+        }
+
+        /* 2. 비밀 메모 (visibility) 및 hover 효과 관련 CSS를 작성하세요 */
+        .secret-memo {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px dashed #6c5ce7;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            color: #001f3f;
+            font-weight: bold;
+            text-align: center;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .card:hover .secret-memo {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="badge">Dream ✨</div>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" alt="범고래 사진">
+
+        <h2>✨ 김해아의 꿈</h2>
+        <p><span class="icon">🌊</span> 1. 범고래 관찰 투어 참여하기!</p>
+        <p><span class="icon">🪪</span> 2. 운전면허 따기!</p>
+        <p><span class="icon">🎮</span> 3. 게임 하나 만들어보기!</p>
+
+        <div class="secret-memo">
+            🤫 TMI: 가장 오래된 기억이<br>범고래 머리 만져본 기억이랍니다!
+        </div>
+
+    </div>
+</body>
+</html>
