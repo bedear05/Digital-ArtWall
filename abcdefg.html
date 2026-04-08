@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>우리 조 버킷리스트 아트 월</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #d4b895;
+            background-image: url('https://www.transparenttextures.com/patterns/cork-board.png');
+            background-attachment: fixed;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+        header {
+            margin: 60px auto 40px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        h1 { color: #333; font-size: 2.8rem; margin-bottom: 10px; }
+        .clearfix::after { content: ""; display: block; clear: both; }
+        .gallery-container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        /* 카드 */
+        .card {
+            float: left; width: 31.33%; margin: 1%;
+            background: radial-gradient(circle at top, #b77820, #612f10);
+            padding: 15px 15px 35px 15px;
+            border-radius: 2px 2px 15px 5px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.25);
+            position: relative; /* 자식인 badge의 기준점 */
+            transform: rotate(-3deg);
+            transition: transform 0.3s ease, z-index 0s;
+        }
+
+        .card:hover{
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+            visibility: visible;
+        }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
+        .card h2 { font-family: 'Nanum Pen Script', cursive; color: #f8e682; font-size: 1.8rem; margin-bottom: 10px; }
+        .card p { font-family: 'Nanum Pen Script', cursive; color: #f8e682; font-size: 1.3rem; text-align: left; line-height: 1.5; }
+        /*시크릿 메모*/
+        .secret-clover { font-family: 'Nanum Pen Script', cursive; color: #f8e68255; font-size: 1.0rem; visibility: hidden;}
+        .secret-memo { font-family: 'Nanum Pen Script', cursive; color: white; font-size: 1.3rem; padding-top: 0.75rem; visibility: hidden;}
+        .clover:hover .secret-clover{
+        visibility: visible;
+        }
+        .card:hover .secret-memo{
+        visibility: visible;
+        }
+        /*배지*/
+        .badge {
+            color: brown;
+            width: 30%; margin: 1%;
+            background: lightyellow;
+            padding: 3px 3px;
+            border-radius: 100px 100px 100px 100px;
+            top: -20px; left: 290px;
+            text-align: center;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.25);
+            position: absolute;
+            transform: rotate(9deg);
+            transition: transform 0.3s ease, z-index 0s;
+            font-size: 1.3rem;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>🏖️ 2026 버킷리스트 아트 월 🏖️</h1>
+        <p style="font-size: 1.5rem; color: #555;">우리 조의 꿈들을 코르크 보드에 붙였습니다!</p>
+    </header>
+    <main class="gallery-container clearfix">
+        <!-- 팀원들의 코드가 들어갈 자리입니다 -->
+                <!-- 팀원 카드 시작 -->
+        <div class="card">
+            <!-- 개인별로 배지 추가하기 (absolute 실습) -->
+            <div class="badge"><b>Good👍</b></div>
+            
+            <img src="https://cdn.pixabay.com/photo/2014/10/16/20/00/woman-491623_1280.jpg" alt="뒷모습의 여자와 노을 사진">
+            <h2>✨ 서희의 꿈</h2>
+            <p>🏖️1. 여행 한 번이라도 가기</p>
+            <p>🍨2. 파르페 먹어보기</p>
+            <p class="clover">🍀3. 네잎클로버 네 개 발견하기<span class="secret-clover">(행운*4)</span></p>
+            <p>📦4. 배운 코드 모아둔 코드 박스 만들기</p>
+            <p>🎨5. 그림 잘 그리기</p>
+            
+            <!-- 개인별로 비밀 메모 추가하기 (visibility 실습) -->
+            <div class="secret-memo">🤫 TMI: 사실 네잎클로버는 버킷리스트는 아닌데 <br>그냥 넣어보고 싶어서 넣음</div>
+        </div>
+        <!-- 팀원 카드 끝 -->
+
+    </main>
+</body>
+</html>
