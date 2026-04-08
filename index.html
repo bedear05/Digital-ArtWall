@@ -25,25 +25,45 @@
             top: 20px;
             z-index: 100;
         }
-        h1 { color: #333; font-size: 2.8rem; margin-bottom: 10px; }
+        h1 { color: #333; font-size: 2.8rem;    margin-bottom: 10px; }
         .clearfix::after { content: ""; display: block; clear: both; }
         .gallery-container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .badge {
+        position: absolute;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
         
         /* 공통 카드 스타일 */
+        .card1 { background: linear-gradient(135deg, #fffcf0 0%, #fff3b0 100%); transform: rotate(-3deg); }
+        .card2 { background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); transform: rotate(1deg); margin-top: 40px; }
+        .card3 { background: linear-gradient(135deg, #e3f2fd 0%, #b3e5fc 100%); transform: rotate(-1.5deg); }
+        .card4 { background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%); transform: rotate(2deg); }
+        .card5 { background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); transform: rotate(-2.5deg); }
+
+        .card1:hover { transform: scale(1.05) rotate(-3deg); z-index: 10; }
+        .card2:hover { transform: scale(1.05) rotate(1deg); z-index: 10; }
+        .card3:hover { transform: scale(1.05) rotate(-1.5deg); z-index: 10; }
+        .card4:hover { transform: scale(1.05) rotate(2deg); z-index: 10; }
+        .card5:hover { transform: scale(1.05) rotate(-2.5deg); z-index: 10; }
+
         .card {
-            float: left; width: 31.33%; margin: 1%;
-            background: linear-gradient(135deg, #fffcf0 0%, #fff3b0 100%);
-            padding: 15px 15px 35px 15px;
+            width: 31.33%; margin: 1%;
+            padding: 15px 15px 100px 15px;
             border-radius: 2px 2px 15px 5px;
             box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
-            position: relative; /* 자식인 badge의 기준점 */
-            transform: rotate(-3deg);
+            position: relative;
             transition: transform 0.3s ease, z-index 0s;
         }
-        .card:hover {
-            transform: scale(1.05) rotate(0deg);
-            z-index: 10;
-        }
+        
         .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
         .card h2 { color: #2c3e50; font-size: 1.8rem; margin-bottom: 10px; }
         .card p { color: #444; font-size: 1.3rem; text-align: left; line-height: 1.5; }
@@ -54,22 +74,57 @@
         <h1>🏖️ 2026 버킷리스트 아트 월 🏖️</h1>
         <p style="font-size: 1.5rem; color: #555;">우리 조의 꿈들을 코르크 보드에 붙였습니다!</p>
     </header>
-    <main class="gallery-container clearfix">
-        <!-- 팀원들의 코드가 들어갈 자리입니다 -->
-                  <!-- 팀원 카드 시작 -->
-        <div class="card">
-            <!-- 개인별로 배지 추가하기 (absolute 실습) -->
-            <!-- <div class="badge" style="position: absolute; ...">Hot🔥</div> -->
-            
+    <main class="gallery-container clearfix row">
+        
+        <!-- card1 -->
+        <div class="card card1">
+            <div class="badge" style="background-color: #ff4d4d; top: -10px; right: -10px; transform: rotate(10deg);">Hot🔥</div>
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
             <h2>✨ 000의 꿈</h2>
             <p>🌊 1. 바다 가서 서핑 배우기</p>
             <p>💻 2. 첫 웹사이트 배포하기</p>
-            
-            <!-- 개인별로 비밀 메모 추가하기 (visibility 실습) -->
             <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
         </div>
-        <!-- 팀원 카드 끝 -->
+
+        <!-- card2 -->
+        <div class="card card2">
+            <div class="badge" style="background-color: #4CAF50; top: -10px; left: -10px; transform: rotate(-10deg);">D-30✈️</div>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
+            <h2>✨ 000의 꿈</h2>
+            <p>🌊 1. 바다 가서 서핑 배우기</p>
+            <p>💻 2. 첫 웹사이트 배포하기</p>
+            <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
+        </div>
+
+        <!-- card3 -->
+        <div class="card card3">
+            <div class="badge" style="background-color: #9c27b0; top: -10px; right: -10px; transform: rotate(10deg);">Pick!🎯</div>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
+            <h2>✨ 000의 꿈</h2>
+            <p>🌊 1. 바다 가서 서핑 배우기</p>
+            <p>💻 2. 첫 웹사이트 배포하기</p>
+            <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
+        </div>
+
+        <!-- card4 -->
+        <div class="card card4">
+            <div class="badge" style="background-color: #4CAF50; top: -10px; left: -10px; transform: rotate(-10deg);">D-30✈️</div>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
+            <h2>✨ 000의 꿈</h2>
+            <p>🌊 1. 바다 가서 서핑 배우기</p>
+            <p>💻 2. 첫 웹사이트 배포하기</p>
+            <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
+        </div>
+
+        <!-- card5 -->
+        <div class="card card5">
+            <div class="badge" style="background-color: #ff4d4d; top: -10px; right: -10px; transform: rotate(10deg);">Hot🔥</div>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
+            <h2>✨ 000의 꿈</h2>
+            <p>🌊 1. 바다 가서 서핑 배우기</p>
+            <p>💻 2. 첫 웹사이트 배포하기</p>
+            <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
+        </div>
 
     </main>
 </body>
