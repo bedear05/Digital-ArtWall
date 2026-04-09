@@ -9,10 +9,10 @@
         body {
             font-family: 'Nanum Pen Script', cursive;
             background-color: #d4b895;
-            background-image: url('https://i.pinimg.com/1200x/1c/8a/9f/1c8a9f3e6ed0caac0d716d6cda05a8bc.jpg');
-            background-size: cover;
+            background-image: url('https://i.pinimg.com/1200x/b5/21/a6/b521a6b691cd029726affda834a8411b.jpg');
+            background-size: 400px;
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-attachment: fixed;
             text-align: center;
             padding-bottom: 100px;
@@ -75,15 +75,15 @@
         .card2 { background: linear-gradient(135deg, #ffffff 0%, #fd8aff 50%, #e431f5 100%); 
         transform: rotate(1deg); margin-top: 40px; }
         .card2:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
-        .card2 h2 { color: #000000; }
-        .card2 p { color: #000000; }
+        .card2 h2 { color: #000000; font-size: 1.8rem;}
+        .card2 p { color: #000000; font-size: 1.5rem;}
         .card2 .secret-memo {
         margin-top: 15px;
         padding: 10px;
         background-color: rgb(255, 255, 255);
         border: 1px solid #000000;
         border-radius: 5px;
-        font-size: 0.85rem;
+        font-size: 1.5rem;
         color: #000000;
         text-align: center;
         visibility: hidden;
@@ -137,13 +137,35 @@
 
 
 
-        .card5 { background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); transform: rotate(-2.5deg); }
+        .card5 { background: url('https://github.com/bedear05/Digital-ArtWall/blob/main/wood.PNG?raw=true') center/cover; transform: rotate(-2.5deg); }
         .card5:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
-        .card5 h2 { color: #000000; }
-        .card5 p { color: #000000; }
+        .card5 h2 { color: #2c3e50; }
+        .card5 p { color: #444; }
+        .card5 .badge-pin {
+            position: absolute;
+            top: -10px; right: -10px;
+            background: red;
+            color: white;
+            padding: 10px 12px;
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+            transform: rotate(10deg);
+        }
+        .card5 .secret-memo {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #aaa;
+            color: #555;
+            font-size: 0.9rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
         .card5:hover .secret-memo {
-        visibility: visible;
-        opacity: 1;
+            visibility: visible;
+            opacity: 1;
         }
 
 
@@ -187,7 +209,7 @@
         <!-- card2 -->
         <div class="card card2">
             <div class="badge" style="background-color: #4CAF50; top: -10px; left: -10px; transform: rotate(-10deg);">Workout💪</div>
-            <img src="https://i.pinimg.com/736x/b6/e6/fb/b6e6fbebd20d4e5519102466d15c35ff.jpg" alt="근육맨">
+            <img src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2018/05/1109-arms.jpg?quality=86&strip=all" alt="근육맨">
             <h2>✨ 조성우의 꿈</h2>
             <p>💪 1. 근육질 몸 만들기</p>
             <p>✈️ 2. 영어 공부 습관 만들기</p>
@@ -221,12 +243,12 @@
 
         <!-- card5 -->
         <div class="card card5">
-            <div class="badge" style="background-color: #ff4d4d; top: -10px; right: -10px; transform: rotate(10deg);">Hot🔥</div>
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
-            <h2>✨ 000의 꿈</h2>
-            <p>🌊 1. 바다 가서 서핑 배우기</p>
-            <p>💻 2. 첫 웹사이트 배포하기</p>
-            <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
+            <div class="badge-pin">pin</div>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=60" alt="커피와 노트">
+            <h2>✨ 안진혁의 꿈</h2>
+            <p>🚗 1. 운전면허 따기</p>
+            <p>👔 2. 알바 붙기</p>
+            <div class="secret-memo">🤫 TMI: 아직 알바 지원 2번해봄</div>
         </div>
 
     </main>
