@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>우리 조 버킷리스트 아트 월</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Nanum Pen Script', cursive;
+            background-color: #d4b895;
+            background-image: url('https://i.pinimg.com/1200x/1c/8a/9f/1c8a9f3e6ed0caac0d716d6cda05a8bc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+        header {
+            margin: 60px auto 40px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        h1 { color: #333; font-size: 2.8rem;    margin-bottom: 10px; }
+        .clearfix::after { content: ""; display: block; clear: both; }
+        .gallery-container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .badge {
+        position: absolute;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        /* 공통 카드 스타일 */
+        .card1 {
+        background: linear-gradient(135deg, #001f3f 0%, #610063 40%, #6c5ce7 100%);
+        transform: rotate(-3deg);
+        }
+        .card1:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+        .card1 h2 { color: #ffffff; }
+        .card1 p { color: #f0f0f0; }
+        .card1 .secret-memo {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.8);
+        border: 1px dashed #6c5ce7;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        color: #001f3f;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+        .card1:hover .secret-memo {
+        visibility: visible;
+        opacity: 1;
+        }
+
+
+        .card2 { background: linear-gradient(135deg, #ffffff 0%, #fd8aff 50%, #e431f5 100%); 
+        transform: rotate(1deg); margin-top: 40px; }
+        .card2:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+        .card2 h2 { color: #000000; }
+        .card2 p { color: #000000; }
+        .card2 .secret-memo {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        color: #000000;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+        .card2:hover .secret-memo {
+        visibility: visible;
+        opacity: 1;
+        }
+
+
+
+
+        .card3 { background: radial-gradient(circle at top, #b77820, #612f10); transform: rotate(-3deg); }
+        .card3:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+        .card3 h2 { font-family: 'Nanum Pen Script', cursive; color: #f8e682; font-size: 1.8rem; margin-bottom: 10px; }
+        .card3 p { font-family: 'Nanum Pen Script', cursive; color: #f8e682; font-size: 1.3rem; text-align: left; line-height: 1.5; }
+        .card3 .secret-clover { color: #f8e68255; font-size: 1.0rem; visibility: hidden; }
+        .card3 .clover:hover .secret-clover { visibility: visible; }
+        .card3 .secret-memo { color: white; font-size: 1.3rem; padding-top: 0.75rem; visibility: hidden; }
+        .card3:hover .secret-memo { visibility: visible; }
+
+
+
+        .card4 { background: linear-gradient(135deg, #bd9e22 0%, #0E0F37 100%); transform: rotate(1deg); }
+        .card4:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+        .card4 h2 { color: #5388bd; }
+        .card4 p { color: #c8d8f0; }
+        .card4 .plane {
+            position: absolute;
+            top: 25px; right: 25px;
+            font-size: 30px;
+            z-index: 10;
+            transform: rotate(-15deg);
+        }
+        .card4 .secret-memo {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #7f8ced;
+            color: #7f8ced;
+            font-size: 0.9rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card4:hover .secret-memo {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+        .card5 { background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); transform: rotate(-2.5deg); }
+        .card5:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+        .card5 h2 { color: #000000; }
+        .card5 p { color: #000000; }
+        .card5:hover .secret-memo {
+        visibility: visible;
+        opacity: 1;
+        }
+
+
+
+        
+        
+        
+        
+
+        .card {
+            width: 31.33%; margin: 1%;
+            padding: 15px 15px 100px 15px;
+            border-radius: 2px 2px 15px 5px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+            position: relative;
+            transition: transform 0.3s ease, z-index 0s;
+        }
+        
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏖️ 2026 버킷리스트 아트 월 🏖️</h1>
+        <p style="font-size: 1.5rem; color: #555;">우리 조의 꿈들을 코르크 보드에 붙였습니다!</p>
+    </header>
+    <main class="gallery-container clearfix row">
+        
+        <!-- card1 -->
+    <div class="card card1">
+        <div class="badge" style="background-color: #ff4757; top: -10px; right: -10px; transform: rotate(15deg);">Dream ✨</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" alt="범고래 사진">
+        <h2>✨ 김해아의 꿈</h2>
+        <p>🌊 1. 범고래 관찰 투어 참여하기!</p>
+        <p>🚗 2. 운전면허 따기!</p>
+        <p>🎮 3. 게임 하나 만들어보기!</p>
+        <div class="secret-memo">🤫 TMI: 가장 오래된 기억이<br>범고래 머리 만져본 기억이랍니다!</div>
+    </div>
+
+        <!-- card2 -->
+        <div class="card card2">
+            <div class="badge" style="background-color: #4CAF50; top: -10px; left: -10px; transform: rotate(-10deg);">Workout💪</div>
+            <img src="https://i.pinimg.com/736x/b6/e6/fb/b6e6fbebd20d4e5519102466d15c35ff.jpg" alt="근육맨">
+            <h2>✨ 조성우의 꿈</h2>
+            <p>💪 1. 근육질 몸 만들기</p>
+            <p>✈️ 2. 영어 공부 습관 만들기</p>
+            <p>🎮 3. 게임 만들어서 배포하기</p>
+            <div class="secret-memo">🤫 TMI: 운동 시작한지 6주 밖에 안됐습니다.</div>
+        </div>
+
+        <!-- card3 -->
+        <div class="card card3">
+            <div class="badge" style="background-color: lightyellow; color: brown; top: -20px; left: 290px; transform: rotate(9deg);">Good👍</div>
+            <img src="https://cdn.pixabay.com/photo/2014/10/16/20/00/woman-491623_1280.jpg" alt="뒷모습의 여자와 노을 사진">
+            <h2>✨ 서희의 꿈</h2>
+            <p>🏖️1. 여행 한 번이라도 가기</p>
+            <p>🍨2. 파르페 먹어보기</p>
+            <p class="clover">🍀3. 네잎클로버 네 개 발견하기<span class="secret-clover">(행운*4)</span></p>
+            <p>📦4. 배운 코드 모아둔 코드 박스 만들기</p>
+            <p>🎨5. 그림 잘 그리기</p>
+            <div class="secret-memo">🤫 TMI: 사실 네잎클로버는 버킷리스트는 아닌데 <br>그냥 넣어보고 싶어서 넣음</div>
+        </div>
+
+        <!-- card4 -->
+        <div class="card card4">
+            <div class="plane">✈️</div>
+            <div class="badge" style="background-color: #ff4757; top: -10px; right: -10px; transform: rotate(15deg);">Dream</div>
+            <img src="https://tourimage.interpark.com/BBS/Tour/FckUpload/201503/6356258929950226150.jpg" alt="체코 밤 풍경">
+            <h2>✨ 배준서 기가막히는 꿈의 희망 버킷리스트✨</h2>
+            <p>🏰 1. 역사와 낭만이 가득한 랜드마크 방문(프라하성)</p>
+            <p>🚢 2. 강 위에서 프라하의 성과 카를교를 한눈에 담을 수 있는 유람선 투어</p>
+            <div class="secret-memo">💰 돈은 없지만 버킷리스트라도 여행을 가기 ㅎㅎ</div>
+        </div>
+
+        <!-- card5 -->
+        <div class="card card5">
+            <div class="badge" style="background-color: #ff4d4d; top: -10px; right: -10px; transform: rotate(10deg);">Hot🔥</div>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60" alt="바다 풍경">
+            <h2>✨ 000의 꿈</h2>
+            <p>🌊 1. 바다 가서 서핑 배우기</p>
+            <p>💻 2. 첫 웹사이트 배포하기</p>
+            <!-- <div class="secret-memo" style="visibility: hidden;">🤫 TMI: 수영 못함</div> -->
+        </div>
+
+    </main>
+</body>
+</html>
